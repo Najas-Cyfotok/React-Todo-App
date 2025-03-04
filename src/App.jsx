@@ -26,11 +26,9 @@ const App = () => {
   const [task, setTask] = useState({
     task: "",
   });
-  // console.log(task);
   const [todos, setTodos] = useState([]);
   const handleSubmit = async () => {
     const result = await taskADD(task);
-    console.log(result);
     if (result.status === 201) {
       toast.success("Task added successfully");
       setTask({ task: "" });
